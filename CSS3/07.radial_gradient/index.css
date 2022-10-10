@@ -1,0 +1,23 @@
+body {
+    background-color: #ddd;
+}
+
+.kotak {
+    width: 250px;
+    height: 150px;
+    margin: 50px auto;
+    background-image: radial-gradient(circle farthest-side at 150px 180px, red, blue);
+    /* Bentuk
+    circle
+    ellipse */
+
+    /* jangkauan
+    closest-corner (sudut terdekat)
+    closest-side (sisi terdekat)
+    farthest-corner (sudut terjauh)
+    farthest-side (sisi terjauh) */
+
+    /* Posisi 
+    posisi x : top, center, bottom / px
+    posisi y : left, center, right / px */
+}

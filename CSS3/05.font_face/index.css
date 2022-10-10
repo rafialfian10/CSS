@@ -1,0 +1,18 @@
+/* Font Face 
+online : www.fonts.google.com -----> jika dijalankan
+offline : fontsquirell.com, fonts.google.com, fontspring.com
+*/
+
+@font-face {
+    font-family: "Alex Brush";
+    src: url('AlexBrush-Regular.ttf') format('truetype');
+}
+
+
+.text {
+    text-align: center;
+    margin: 100px auto;
+    font-size: 50px;
+    color: black;
+    font-family: "Alex Brush", arial;
+}

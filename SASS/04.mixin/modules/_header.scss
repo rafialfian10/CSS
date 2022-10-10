@@ -1,0 +1,14 @@
+.header ul {
+    @include inline-list(); //panggil mixin dengan menggunakan @include
+    li {
+        background-color: black;
+        padding: 0.5em;
+        box-sizing: border-box;
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 0.5px;
+        }
+    }
+}

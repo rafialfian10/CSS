@@ -1,0 +1,32 @@
+/* Property animation
+[name] : nama animasi yang dibuat dengan menggunakan @keyframes
+[duration] : 10s
+[timing-function] : ease
+[delay]
+[iteration-count] : angka / infinite
+[direction] : normal, reverse, alternate, alternate-reverse
+[fill-mode] : none, forwards, backwards, both
+[play-state] : running, paused */
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    animation: animasiKotak 2s ease 3 alternate forwards ;
+}
+
+@keyframes animasiKotak {
+    0% {
+        
+    }
+
+    50% {
+        width: 150px;
+        height: 100px;
+    }
+
+    100% {
+        width: 150px;
+        height: 150px;
+    }
+}

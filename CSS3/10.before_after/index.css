@@ -1,0 +1,146 @@
+.kotak {
+    margin: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 200px;
+    position: relative;
+}
+
+.kotak::before {
+    content: "Hello ";
+}
+
+.kotak::after {
+    content: ", Good Morning!";
+}
+
+.kotak::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    background-color: salmon;
+}
+
+.kotak::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -25px;
+    bottom: -25px;
+    background-color: lightgreen;
+}
+
+/* Menambahkan image dengan before after */
+.image {
+    /* content: url(sasuke.jpg); Jika memanggil image lewat content, maka tidak dapat mengatur size gambar */
+    content: "";
+    background-image: url(sasuke.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    box-shadow: 2px 2px 5px 1px grey;
+    margin-bottom: 50px;
+}
+
+
+/* Menambahkan image icon */
+h3::before {
+    content: "";
+    display: block;
+    background-image: url(profile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-bottom: 50px;
+    float: left;
+}
+
+
+a {
+  text-decoration: none;  
+  color: black;  
+  font-size: 18px;
+  font-weight: bold;
+}
+
+a::after {
+    content: " /";
+}
+
+a:first-child::before {
+    content: "::";
+}
+
+a:last-child::after {
+    content: "";
+}
+
+
+/* Quoting */
+blockquote {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1,4em;
+    position: relative;
+    margin-top: 50px;
+}
+
+blockquote::before,
+blockquote::after {
+    content: open-quote;
+    font-size: 40px;
+    color: red;
+    line-height: 0;
+    position: relative;
+    top: 10px;
+}
+
+blockquote::after {
+    content: close-quote;
+}
+
+
+/* Bubble Text */
+h2 {
+    float: left;
+    width: 170px;
+    margin-top: 50px;
+}
+
+.bubble-text {
+    float: left;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #727272;
+    color: white;
+    line-height: 20px;
+    position: relative;
+    top: 30px;
+}
+
+.bubble-text::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-right-color: #727272;
+    border-width: 15px;
+    left: -30px;
+    top: 20px;
+}

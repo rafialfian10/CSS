@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #eee;
+    overflow-x: hidden;
+}
+
+nav{
+    background-color: rgb(24, 190, 246);
+    padding: 20px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 40%;
+}
+
+nav div.logo{
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    letter-spacing: 2px; /* supaya ada jarak spasi ditiap huruf */
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+nav ul li a:hover{
+    font-weight: bold;
+    color: azure;
+}
+
+
+/* responsive breakpoint */
+/* ukuran tablet */
+@media screen and (max-width: 768px){
+    nav ul{
+        width: 60%;
+    }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px){
+    
+    div.menu-toggle{
+        display: flex;
+    }
+
+    nav ul{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: blue;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+}
+
+
+
+/* menu toggle */
+.menu-toggle{
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    opacity: 0;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block; 
+    height: 3px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+/* Animasi menu toggle */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0% 0%;
+}
+
+.menu-toggle span:nth-child(3){
+    opacity: 1;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0% 100%;
+}
+
+/* apabila input di checklist */
+.menu-toggle input:checked ~ span:nth-child(2){
+    
+    transform: rotate(45deg) translate(-1px, -1px) scaleX(1.11);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+    opacity: 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(0px, 0px) scaleX(1.11);
+}
+
+/*toggle slide  */
+nav ul.slide{
+    transform: translateX(0);
+    opacity: 1
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

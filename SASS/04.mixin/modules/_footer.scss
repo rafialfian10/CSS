@@ -1,0 +1,14 @@
+.footer ul {
+    @include inline-list();
+    li {
+        background-color: salmon;
+        padding: 0.3em;
+        box-sizing: border-box;
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 0.5px;
+        }
+    }
+}

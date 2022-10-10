@@ -1,0 +1,46 @@
+/* justify-self berfungsi untuk mengatur posisi item apda sebuah cell terhadap sumbu horizontal sedangkan align-self untuk sumbu vertikal */
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #ddd;
+}
+
+.container {
+    background-color: white;
+    border: 1px solid black;
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    gap: 5px; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); 
+}
+
+.items {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: lightskyblue;
+    padding: 30px;
+}
+
+.item1 {
+    padding: 0px;
+    background-color: lightsalmon;
+    /* justify-self: start; */
+    /* justify-self: end; */
+    /* justify-self: center; */
+    /* justify-self: stretch; */
+
+     /* align-self: start; */
+    /* align-self: end; */
+    /* align-self: center; */
+    /* align-self: stretch; */
+
+    place-self: end start; 
+    /* shorthand <align-self> <justify-self>, jika sama, dapat ditulis satu saja */
+}

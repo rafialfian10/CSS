@@ -1,0 +1,29 @@
+body {
+    background-color: #ddd;
+}
+
+// .main {
+//     background-color: white;
+    
+//     // .main-header dapat diganti dengan &-header / & &-header
+//     & &-header {
+//         font-size: 1.3em;
+//         color: black;
+//         letter-spacing: 1px;
+//     }
+    
+//     & &-paragraph {
+//         font-size: 1.1em;
+//         color: black;
+//     }
+// }
+
+// Atau dapat menggunakan cara ini
+.main .footer {
+    h1, p {
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        color: black;
+    }
+}
+

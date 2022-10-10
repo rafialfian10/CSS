@@ -1,0 +1,80 @@
+body {
+    background-color: #ddd;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container-satu {
+    width: 600px;
+    margin: 100px auto;
+    box-sizing: border-box;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 100px auto 25%; 
+    grid-template-rows: 25% auto 200px 30%; /* auto didaat dari sisanya */
+}
+
+.item {
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:nth-child(even) {
+    background-color:blue;
+}
+
+
+/* Explisit & Implisit */
+/* Explisit : ketika grid dari kolom dan baris sudah ditentukan secaara jelas
+Implisit : ketika grid ditentukan secara otomatis karena tidak ditentukan secara explisit (otomatis sudah ditentukan oleh grid-nya) */
+
+/* jika dibuka di firefox */
+/* garis terluar disebut garis solid untuk menentukan explisit grid-nya, jad untuk melihat grid-nya berawa dan berakhir dimana*/
+/* garis putus-putus agak panjang pada kolom itu disebut dengan garis explisit karena sudah ditentukan pada grid-template-columns */
+/* sedangkan garis ttik-titik pada baris itu disebut dengan garis implisit karena belum ditentukan */
+
+
+
+/* cara mengatur ukuran kolom yang implisit  */
+/* dengan menggunakan gird-auto-column & grid-auto-rows. Berfungsi untuk mengatur ukuran grid rack yang tidak dituliskan pada grid template (implisit track) */
+
+
+/* gird-auto-flow */
+/* Untuk mengatur item /cell pada grid trak, termasuk yng ditulis secara implisit (row-column-row dense-column dense) (sama seperti flex-direction pada flexbox) */
+
+.container-dua {
+    width: 600px;
+    margin: 100px auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 200px 100px;
+    grid-template-rows: 50px 100px 120px;
+    grid-auto-rows: 150px; /* jadi 2 kolom terakhir yang implisit itu dapat diatur ukurannya */
+    gap: 2px;
+} /* untk mengatur grid-auto-rows */
+
+.container-tiga {
+    width: 600px;
+    margin: 100px auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 200px 100px;
+    grid-auto-flow: column; /* jadi cell 1-2 explisit sedangka 3-9 implisit, lalu dapat diatur pada baris yang implsit dengan grid-auto-columns */
+    grid-auto-columns: 50px;
+    gap: 2px;
+} /* untk mengatur grid-auto-column */
+
+.items {
+    background-color: lightcoral;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items:nth-child(even) {
+    background-color:lightskyblue;
+}

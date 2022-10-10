@@ -1,0 +1,49 @@
+/* justify-items dan align-items mensejajarkan items pada sumbu horizontal  */
+
+
+/* justify-items untuk mengatur posisi items secara horizontal. Sedangkan align-items untuk mengatur posisi secara vertikal */
+
+body{
+    background-color: #ddd;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 130px 130px 130px;
+    gap: 3px;
+    /* justify-items: start; */
+    justify-items: end;
+    /* justify-items: center; */
+    /* justify-items: stretch; */
+    /* nilai default-nya stretch */
+
+    /* align-items: start; */
+    align-items: end;
+    /* align-items: center; */
+    /* align-items: stretch; */
+    /* nilai default-nya stretch */
+
+    /* place-items: center center; jadi nilai pada justify dan align bisa diberikan secara bersamaan */
+}
+
+.item {
+    background-color: lightskyblue;
+    height: 80px;
+    border: 3px solid black;
+}
+
+.item.satu, .item.empat, .item.tujuh {
+    width: 80px;
+}
+
+.item.dua, .item.lima, .item.delapan {
+    width: 30px;
+}
+
+.item.tiga, .item.enam, .item.sembilan {
+    width: 50px;
+}

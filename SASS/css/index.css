@@ -1,0 +1,9 @@
+body {
+  background-color: #ddd;
+}
+
+.main .footer h1, .main .footer p {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  color: black;
+}/*# sourceMappingURL=index.css.map */

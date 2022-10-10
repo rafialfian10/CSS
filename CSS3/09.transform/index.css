@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    transition: margin-left 2s, transform 2s 2s, border-radius 2s 2s, background-color 2s 2s cubic-bezier(0.19,-0.51, 0.82, 1.5);  
+    background-color: blue;
+    /* transition dapat diberi delay(angka kedua adalah delay */
+}
+
+.container:hover .kotak {
+    transform: scale(.5) rotate(720deg);
+    margin-left: 800px;
+    border-radius: 50%;
+    background-color: red;
+}

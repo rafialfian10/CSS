@@ -1,0 +1,137 @@
+// Flow Control
+
+// if
+@mixin profile-picture($size, $circle: false) {
+    width: $size;
+    height: $size;
+    border: 1px solid black;
+    box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: 1.0);
+    margin-bottom: 20px;
+
+    // Berikan pengkondisian
+    @if $circle { 
+        border-radius: 50%;
+    }
+}
+
+
+.circle-picture {
+    @include profile-picture(100px, $circle: true );
+}
+
+.square-picture {
+    @include profile-picture(100px, $circle: false );
+}
+//-------------------------------------------------------
+
+// else
+$light-bg: #fefefe;
+$light-text: #333;
+$dark-bg: #999;
+$dark-text: #ddd;
+
+@mixin color-mode($bg-mode: true) {
+    @if $bg-mode {
+        background-color: $light-bg;
+        color: $light-text;
+    } @else {
+        background-color: $dark-bg;
+        color: $dark-text;
+    }
+}
+
+.navigation {
+    @include color-mode($bg-mode: true);
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+body {
+    @include color-mode($bg-mode: false);
+}
+//------------------------------------------------
+
+// else if
+@mixin triangle($size, $color, $direction: left){
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-color: transparent;
+    border-style: solid;
+    border-width: $size;
+
+    @if $direction == top {
+        border-bottom-color: $color;
+    } @else if $direction == right {
+        border-left-color: $color;
+    } @else if $direction == bottom {
+        border-top-color: $color;
+    } @else {
+        border-right-color: $color; // jika right akan menjadi anak panah kekiri
+    }
+}
+
+.segitiga {
+   @include triangle(2em, black, right);
+   margin-bottom: 20px
+}
+// --------------------------------------------------
+
+
+// Membuat gradasi color dengan looping
+// For 
+// .colors {
+//     $color: salmon;
+//         list-style: none;
+//         margin: 0;
+//         padding: 0;
+
+//         @for $i from 1 to 11 {
+//             li:nth-child(#{$i}) { // $i harus di interpolasi #{  }
+//                 background-color: lighten($color, $i * 2);
+//             }
+//         }
+// }
+
+
+// While
+.colors {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    $color: lightblue;
+    $i: 1;
+    @while $i < 11 {
+        li:nth-child(#{$i}) {
+            background-color: darken($color, $i * 3%);
+        }
+        $i: $i + 1;
+    }
+}
+
+// each
+$social-colors: (
+    youtube: red,
+    facebook: blue,
+    twitter: yellow,
+    instagram: rgb(255, 17, 255),
+    twitch: green,
+);
+
+.socials {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+
+    @each $social, $color in $social-colors { //nama propety dan value bebas
+        .#{$social} { // pakai interpolasi
+            color: $color;
+        }
+    }
+}
+
+
+

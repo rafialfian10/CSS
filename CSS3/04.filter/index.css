@@ -1,0 +1,19 @@
+/* Filter
+    blur(px)
+    brightness(angka | %)
+    saturate(angka | %)
+    grayscale(angka | %)
+    sepia(angka | %)
+    hue-rotate(deg)
+    invert(angka | %)
+    opacity(angka | %)
+    drop-shadow(sama seperti box shadow) berfungsi untuk memberikan bayangan pada objek(gambar) yang transparan
+    */
+
+img {
+    width: 350px;
+    height: 300px;
+    margin: 50px auto;
+    display: block;
+    filter: hue-rotate(200deg);
+}

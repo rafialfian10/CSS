@@ -1,0 +1,35 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #ddd;
+    text-align: center;
+}
+
+h2{
+    margin: 20px auto;
+}
+
+
+
+.gallery {
+    width: 80%;
+    margin: 30px auto;
+    list-style: none;
+    border: 3px solid white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr) );
+}
+
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+

@@ -1,0 +1,30 @@
+$bg-color: #fff;
+$primary-color: lightgrey;
+$text-color: blue;
+$text-secondary-color: red;
+
+$alert: (
+    "danger": red,
+    "success": green,
+    "warning": orange,
+);
+
+body {
+    background-color: $bg-color;
+}
+
+.container {
+    h1{
+        $text-secondary-color: salmon !global; // ini hanya akan dapat diakses oleh h1 karena local scope, dan jika ingin diubah menjadi variabel global maka tambahkan !global
+        color: $text-secondary-color;
+    }
+
+    h3 {
+        color: map-get($alert, "success");
+    }
+
+    p{
+        color: $text-secondary-color;
+        // color akan tetap mengambil variabel yang ada didalam h1
+    }
+}

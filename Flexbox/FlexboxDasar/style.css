@@ -1,0 +1,76 @@
+.container {
+    width: 800px;
+    /* height: 250px;  */
+    /* untuk meyesuaikan tinggi container dengan div mak gunakan clear: both */
+    border: 3px solid black;
+    margin: 50px auto;
+    padding: 3px;
+    
+    box-sizing: border-box;
+    display: flex; /* flex berfungsi agar container menyesuaikan div,pengganti clear */
+    flex-direction: row; /* value: row, row-reverse, column, columns-reverse. Berfungsi untuk mengatur arah urutan elemen-elemen didalamnya */
+    flex-wrap: wrap; /* value: wrap, wrap-reverse. Berfungsi untuk memindahkan item ke baris dibawahnya, jika item pada sudah tidak muat */
+    justify-content: space-evenly;/*value: flex-start, flex-end, center untuk mengatur posisi, space-between, space-around, space-evenly untuk mengatur jarak pada items*/;
+    align-items: stretch;/* value: flex-start, flex-end, center untuk mengatur rata pada item, stretch, untuk mengatur fleksibilitas pada item, baseline untuk mengatur rata tengah berdasarkan content / tulisan didalamnya*/
+    align-content: space-between;
+    /* value: flex-start, flex-end, center untuk mengatur rata pada item, stretch, untuk mengatur fleksibilitas pada item, space-between, space-around untuk mengatur jarak antar item terhadap croos axis, (hanya berlaku ketika items lebih dari 1 baris)*/
+}
+
+/* .container::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+tapi dengan cara ini terlalu lama, jika ingin lebih efektif, maka gunakan flexbox */
+
+.container div {
+    width: 140px;
+    height: 150px;
+    margin: 2px;
+    background-color: rgb(155, 155, 155);
+    border: 1px solid black;
+}
+
+/*order berfungsi untuk mengatur urutan-urutan items*/
+.satu{order: 5;}
+.dua{order: 8;}
+.tiga{order: 7;}
+.empat{order: 4;}
+.lima{order: 1;}
+.enam{order: 2;}
+.tujuh{order: 6;}
+.delapan{order: 3;}
+
+/* -------------------------------- */
+
+.container2{
+    width: 800px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 10px auto;
+    padding: 3px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* flex-grow berfungsi untuk mengatur ukuran pada tiap items */
+.container2 div {
+    /* width: 150px;
+    height: 150px; */
+    border: 2px solid black;
+    background-color: grey;
+    margin: 2px;
+    flex-grow: 1; /* jadi tiap iem aka dberi ukuran 1 */
+}
+
+.container2 div.two{
+    flex-grow: 2;
+    align-self: center;
+    /* jika diberikan flex: 2 pada item two maka, item yang lain akan menyesuaikan  */
+}
+
+/* align-self(khusus untuk satu elemen saja) */
+.container2 div.four{
+    align-self: flex-end;
+}
+

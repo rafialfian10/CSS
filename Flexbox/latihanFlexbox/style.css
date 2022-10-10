@@ -1,0 +1,172 @@
+/* Laihan 1 */
+html, body{
+    background-color: #ddd;
+    margin-bottom: 800px;
+}
+
+.container-satu {
+    width: 1220px;
+    margin: 50px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    line-height: 20px;
+    background-color: white;
+    display: flex;
+}
+.container-satu div{
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.kolom-utama{
+    flex: 3;
+    order: 2;
+}
+
+.sidebar-satu{
+    flex: 1;
+    order: 1;
+}
+
+.sidebar-dua{
+    flex: 1;
+    order: 3;
+}
+/* akhir latihan 1 */
+
+
+/* latihan 2 responsive*/    
+/* dibawah 700px */
+.container-dua{
+    max-width: 1220px;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.layanan{
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.layanan.satu{
+    background-color: red;
+} 
+
+.layanan.dua{
+    background-color: yellow;
+}
+
+.layanan.tiga{
+    background-color: green;
+}
+/* responsive */
+/* diatas 700px */
+@media(min-width: 900px){
+    .container-dua{
+        display: flex;
+        justify-content: space-between;
+    }
+    .layanan{
+        width: 30%;
+    }
+}
+/* akhir latihan 2 */
+
+/* Latihan 3 gallery*/
+.container-tiga{
+    max-width: 1220px;
+    margin: 50px auto;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumnail{
+    width: 50%;
+}
+
+
+.thumnail img{
+    width: 100%;
+}
+
+@media(min-width: 900px){
+    .thumnail{
+        width: 25%;
+    }
+}
+
+/* Latihan 4 */
+.container-empat{
+    max-width: 1220px;
+    margin: 50px auto;
+    
+}
+
+.card{
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.card .header{
+    background-color: aqua;
+    height: 150px;
+}
+
+.card .content{
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.card.dua{
+    transform: scale(1.05);
+}
+
+@media(min-width: 900px){
+    .container-empat{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .card{
+        width: 31%;
+    }
+}
+
+
+/* Latihan 5 centering */
+.container-lima{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+}
+
+.kotak{
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+    margin: auto;
+    text-align: center;
+    display: flex;
+}
+
+.kotak span{
+    margin: auto;
+}
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+// .container {
+//     max-width: 100vw;
+//     background-color: #fff;
+// }
+
+// .header {
+//     li {
+//         display: inline-block;
+//         padding: 5px;
+//         background-color: grey;
+
+    //     a {
+    //         text-decoration: none;
+    //         color: white;
+    //     }
+//     }
+    
+// }
+
+// .main {
+//     width: 600px;
+//     height: 400px;
+//     background-color: lightgrey;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     div {
+//         width: 50px;
+//         height: 50px;
+//         background-color: black;
+//         margin: 10px;
+//         // margin: auto;
+
+//     }
+// }
+
+// .footer {
+//     li {
+//         display: inline-block;
+//         padding: 4px;
+//         background-color: salmon;
+
+    //     a {
+    //         text-decoration: none;
+    //         color: white;
+    //     }
+    // }
+//     }
+
+//-----------------------------------------------------------------------
+
+// Mixin
+// @import 'modules/function-mixin';
+// @import 'modules/header';
+// @import 'modules/main';
+// @import 'modules/footer';
+
+// Saat ini tidak disarankan mengggunakan @import karena terdapat beberapa masalah. @import diganti dengan @use
+// @use 'modules/function-mixin';
+@use 'modules/header';
+@use 'modules/main';
+@use 'modules/footer';
+
+.container {
+    max-width: 100vw;
+    background-color: #fff;
+}
+
+// Cara memanggil sass
+// sass source/index.scss css/index.css
+// dart compile-sass.dart styles.scss styles.css
+
+
+
+
+
+
+
+
+
+
+

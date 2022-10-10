@@ -1,0 +1,45 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #ddd;
+    text-align: center;
+}
+
+
+
+.item {
+    background-color: lightskyblue;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:nth-child(even){
+    background-color: lightsalmon;
+}
+
+
+/* Special function */
+/*  1. repeat()
+    2. min-content & max-content
+    3. minmax()
+    4. auto-fill & auto-fit*/
+
+
+/* auto-fill & auto-fit untuk menentukan jumlah item untuk berada pada grid track. biasanya digunakan dalam function repeat()*/
+.container {
+    width: 70%;
+    margin: 100px auto;
+    border: 1px solid black;
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(auto-fit, 100px);
+    /*berfungsi agar auto-fill & auto-fit cocok untuk digunakan untuk membuat layout yang responsive.perbedaannya pada auto-fit garis explisit-nya akan berhenti pada elemen / cell terakhir. Sedangkan auto-fill
+    akan menentukan akhir dari gridnya pada cell yang kosong setelah cell terakhir, karena grid-nya menganggap masih muat sau cell lagi*/
+}
+

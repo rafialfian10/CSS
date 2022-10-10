@@ -1,0 +1,46 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #ddd;
+    text-align: center;
+}
+
+
+
+.item {
+    background-color: lightskyblue;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:nth-child(even){
+    background-color: lightsalmon;
+}
+
+
+/* Special function */
+/*  1. repeat()
+    2. min-content & max-content
+    3. minmax()
+    4. auto-fill & auto-fit*/
+
+
+/* minmax untuk menentukan ukuran minimal da maksimal dari grid track*/
+
+.container {
+    width: 70%;
+    margin: 100px auto;
+    display: grid;
+    gap: 2px;
+    grid-template-columns:1fr minmax(100px, 300px) 1fr;
+    border: 1px solid black;
+}
+/* jika layar diperkecil, maka cell hanya akan mengecil sampai ukuran 100px saja, dan jika layar diperbesar, maka akan sampai pada ukuran 200px saja */
+
+
